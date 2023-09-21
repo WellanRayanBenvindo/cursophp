@@ -14,7 +14,10 @@
     // $v = 300;
     // var_dump($v);
 
-    $num = 
+    $num = 10;
+    $num2 = 20;
+
+    echo $num + $num2;
 
     ?>
 </body>
