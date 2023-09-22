@@ -13,8 +13,8 @@
 
     <main>
         <?php 
-            $nome = $_GET["nome"];
-            $sobrenome = $_GET["sobrenome"];
+            $nome = $_GET["nome"] ?? "Digite o nome";
+            $sobrenome = $_GET["sobrenome"] ?? "Digite o sobrenome";
 
             echo "<p> É um prazer te conhecer $nome $sobrenome este é o meu site !!! </p>";
         ?>
