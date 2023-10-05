@@ -20,6 +20,10 @@
                 echo "O seu sucessor é $suse";
             ?>
         </p>
+
+        <p>
+           <a href="javascript:history.go(-1)"> Voltar a Página anterior</a>
+        </p>
     </main>
 </body>
 </html>
