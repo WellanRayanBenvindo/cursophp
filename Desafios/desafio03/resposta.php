@@ -13,18 +13,24 @@
         //cotação copiada do google dia 07/10/2023
             $cotação = 5.15;
         // quantos $$ voce tem ?
-            $dolar = 1000;
+            $real = $_GET["din"] ?? 0;
 
         // equivalencia do dolar 
 
-        $dolar = $cotação / $dolar;
+        $dolar = $real / $cotação;
 
 
-            echo "Voce tem $valor em sua carteira."
+            //echo "Seus R\$" . number_format($real,2 ,",", ".") . "equivalem a US\$" . number_format($dolar, 2);
 
-            
+            //Formatação de moedas com internacionalização
+
+        $padrao = numfmt_create("pt-BR", NumberFormatter::CURRENCY);
+
+        echo "Seus " . numfmt_format_currency($padrao, $real, "BRL"). " Equivalem a " . numfmt_format_currency($padrao, $dolar, "USD");
         
         ?>
+
+        <button onclick="javascript:history.go(-1)">Voltar</button>
     </main>
 </body>
 </html>
